@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#c83d70">
+  <meta name="description" content="natassia — اكتشفي عالم الجمال والعناية بالبشرة والمكياج والعطور.">
+
+  <title>natassia Beauty | جمالك هو قصتنا</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <div class="announcement">✦ توصيل حسب المنطقة ✦</div>
+
+  <header class="site-header">
+
+    <div class="header-tools">
+      <button class="icon-btn cart-trigger" aria-label="فتح السلة" id="cartOpen">
+        🛍️ <span class="cart-count" id="cartCount">0</span>
+      </button>
+
+      <button class="icon-btn" aria-label="المفضلة" id="favoritesShortcut">♡</button>
+      <button class="icon-btn" aria-label="البحث" id="searchFocus">⌕</button>
+    </div>
+
+    <button class="menu-toggle icon-btn" id="menuToggle" aria-label="فتح القائمة">☰</button>
+
+    <a class="brand" href="#home" aria-label="natassia الصفحة الرئيسية">
+      <span class="brand-flower">✿</span>
+      <span class="brand-name">natassia</span>
+      <span class="brand-tagline">BEAUTY MAKES YOU SHINE</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="القائمة الرئيسية">
+      <a class="active" href="#home">الرئيسية</a>
+      <a href="#products">المنتجات</a>
+      <a href="#categories">الأقسام</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <!-- الواجهة الرئيسية -->
+    <section class="hero" id="home">
+
+      <div class="hero-image" role="img" aria-label="مستحضرات تجميل فاخرة بدرجات وردية"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">YOUR BEAUTY, YOUR STORY</p>
+
+        <h1>مرحباً بكِ في<br><span>natassia</span></h1>
+
+        <h2>جمالكِ... هو قصتنا</h2>
+
+        <p class="hero-copy">
+          اكتشفي منتجات التجميل والعناية التي تستحقها بشرتكِ،
+          واختاري لمستكِ الخاصة من عالم مليء بالجمال.
+        </p>
+
+        <a class="button button-primary" href="#products">
+          تسوّقي الآن <span>←</span>
+        </a>
+
+        <div class="hero-note">
+          <span>✦</span> جمال يليق بكِ في كل يوم
+        </div>
+      </div>
+
+      <div class="hero-stamp">BEAUTY<br><b>INSIDE<br>OUT</b></div>
+
+    </section>
+
+    <!-- أقسام المتجر -->
+    <section class="categories section-wrap" id="categories">
+
+      <div class="section-heading compact-heading">
+        <p class="eyebrow">EXPLORE natassia</p>
+        <h2>اكتشفي عالم الجمال</h2>
+      </div>
+
+      <div class="category-grid">
+
+        <button class="category-card" data-category="العطور">
+          <span class="category-icon">♧</span>
+          <b>العطور</b>
+          <small>عطور تعبّر عنكِ</small>
+        </button>
+
+        <button class="category-card" data-category="المكياج">
+          <span class="category-icon">✧</span>
+          <b>المكياج</b>
+          <small>تألقي بطريقتكِ</small>
+        </button>
+
+        <button class="category-card" data-category="العناية بالبشرة">
+          <span class="category-icon">❀</span>
+          <b>العناية بالبشرة</b>
+          <small>إشراقة تبدأ بالعناية</small>
+        </button>
+
+        <button class="category-card" data-category="العناية بالشعر">
+          <span class="category-icon">〰</span>
+          <b>العناية بالشعر</b>
+          <small>لشعر أكثر حيوية</small>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- المنتجات -->
+    <section class="products-section" id="products">
+      <div class="section-wrap">
+
+        <div class="section-heading">
+          <p class="eyebrow">THE natassia EDIT</p>
+          <h2>الأكثر مبيعاً <span class="heading-flower">✿</span></h2>
+          <p>اختياراتنا المفضلة، مختارة بعناية من أجلكِ</p>
+        </div>
+
+        <div class="product-toolbar">
+
+          <label class="search-box">
+            <span>⌕</span>
+            <input
+              id="productSearch"
+              type="search"
+              placeholder="ابحثي عن منتجكِ المفضل..."
+              aria-label="البحث عن المنتجات">
+          </label>
+
+          <select id="categoryFilter" aria-label="تصفية حسب الفئة">
+            <option value="الكل">جميع المنتجات</option>
+            <option value="العطور">العطور</option>
+            <option value="المكياج">المكياج</option>
+            <option value="العناية بالبشرة">العناية بالبشرة</option>
+            <option value="العناية بالشعر">العناية بالشعر</option>
+          </select>
+
+        </div>
+
+        <div class="product-grid" id="productGrid">
+
+          <!-- المنتج الأول -->
+          <article class="product-card"
+            data-name="مزيل عرق طبيعي"
+            data-category="العناية بالبشرة"
+            data-price="149">
+
+            <div class="product-photo photo-cream">
+              <span class="product-label new-label">جديد</span>
+
+              <button class="favorite-btn" aria-label="إضافة للمفضلة">♡</button>
+
+              <img
+                src="https://res.cloudinary.com/q8mox8ab/image/upload/v1791894438/IMG_0906.jpg"
+                alt="مزيل عرق طبيعي"
+                loading="lazy">
+            </div>
+
+            <div class="product-info">
+              <p class="product-category">العناية بالبشرة</p>
+              <h3>مزيل عرق طبيعي</h3>
+              <p class="product-desc">عناية يومية بلمسة ناعمة</p>
+
+              <div class="rating">★★★★★ <span>(19)</span></div>
+
+              <div class="product-bottom">
+                <strong>149 ر.س</strong>
+                <button class="add-to-cart">
+                  أضيفي إلى السلة <span>＋</span>
+                </button>
+              </div>
+            </div>
+
+          </article>
+
+          <!-- المنتج الثاني -->
+          <article class="product-card"
+            data-name="مرطب مورد طبيعي للشفاه والخدود"
+            data-category="المكياج"
+            data-price="119">
+
+            <div class="product-photo photo-lipstick">
+              <span class="product-label">الأكثر مبيعاً</span>
+
+              <button class="favorite-btn" aria-label="إضافة للمفضلة">♡</button>
+
+              <img
+                src="https://res.cloudinary.com/q8mox8ab/image/upload/v1791894437/IMG_0904.jpg"
+                alt="مرطب طبيعي للشفاه والخدود"
+                loading="lazy">
+            </div>
+
+            <div class="product-info">
+              <p class="product-category">المكياج</p>
+              <h3>مرطب مورد طبيعي للشفاه والخدود</h3>
+              <p class="product-desc">لون جميل ولمسة ناعمة</p>
+
+              <div class="rating">★★★★★ <span>(36)</span></div>
+
+              <div class="product-bottom">
+                <strong>119 ر.س</strong>
+                <button class="add-to-cart">
+                  أضيفي إلى السلة <span>＋</span>
+                </button>
+              </div>
+            </div>
+
+          </article>
+
+          <!-- المنتج الثالث -->
+          <article class="product-card"
+            data-name="ماسك الشعر"
+            data-category="العناية بالشعر"
+            data-price="99">
+
+            <div class="product-photo photo-cleanser">
+              <span class="product-label new-label">جديد</span>
+
+              <button class="favorite-btn" aria-label="إضافة للمفضلة">♡</button>
+
+              <img
+                src="https://res.cloudinary.com/q8mox8ab/image/upload/v1791894437/IMG_0902.jpg"
+                alt="ماسك الشعر"
+                loading="lazy">
+            </div>
+
+            <div class="product-info">
+              <p class="product-category">العناية بالشعر</p>
+              <h3>ماسك الشعر</h3>
+              <p class="product-desc">عناية تمنح شعركِ لمسة ناعمة</p>
+
+              <div class="rating">★★★★★ <span>(14)</span></div>
+
+              <div class="product-bottom">
+                <strong>99 ر.س</strong>
+                <button class="add-to-cart">
+                  أضيفي إلى السلة <span>＋</span>
+                </button>
+              </div>
+            </div>
+
+          </article>
+
+        </div>
+
+        <p class="empty-state" id="emptyState" hidden>
+          غير متوفر حالياً
+        </p>
+
+        <div class="center-action">
+          <button class="button button-outline" id="showAll">
+            اكتشفي مجموعتنا <span>←</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- الاشتراك في النشرة -->
+    <section class="newsletter section-wrap">
+
+      <div class="newsletter-flower">✿</div>
+
+      <div>
+        <p class="eyebrow">A LITTLE LOVE, FROM US</p>
+        <h2>كوني أول من يعرف جديدنا</h2>
+        <p>اشتركي في رسائلنا لتصلكِ أحدث المنتجات والعروض الخاصة.</p>
+      </div>
+
+      <form id="newsletterForm" class="newsletter-form">
+        <label class="sr-only" for="email">البريد الإلكتروني</label>
+
+        <input
+          id="email"
+          type="email"
+          placeholder="بريدكِ الإلكتروني"
+          required>
+
+        <button type="submit">اشتركي الآن</button>
+
+        <small id="newsletterMessage" aria-live="polite"></small>
+      </form>
+
+    </section>
+
+  </main>
+
+  <!-- نهاية الصفحة -->
+  <footer class="site-footer">
+
+    <div class="footer-brand">
+      <span class="brand-name">natassia</span>
+      <p>جمالكِ، حكايتنا المفضلة.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#home">الرئيسية</a>
+      <a href="#products">تسوقي</a>
+      <a href="#categories">اكتشفي مجموعتنا</a>
+      <a href="mailto:hello@natassia.example">تواصلي معنا</a>
+    </div>
+
+    <p class="copyright">
+      © <span id="year"></span> natassia Beauty. جميع الحقوق محفوظة.
+    </p>
+
+  </footer>
+
+  <!-- إشعار الموقع -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- سلة التسوق -->
+  <div class="cart-overlay" id="cartOverlay" hidden>
+
+    <button
+      class="overlay-dismiss"
+      id="cartCloseBackdrop"
+      aria-label="إغلاق السلة"></button>
+
+    <aside
+      class="cart-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cartTitle"
+      tabindex="-1">
+
+      <div class="cart-header">
+        <h2 id="cartTitle">سلة التسوق</h2>
+        <button class="icon-btn" id="cartClose" aria-label="إغلاق">×</button>
+      </div>
+
+      <div id="cartItems" class="cart-items">
+        <p class="cart-empty">سلتكِ فارغة حالياً ♡</p>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>المجموع</span>
+          <strong id="cartTotal">0 ر.س</strong>
+        </div>
+
+        <button class="button button-primary checkout-btn" id="checkoutBtn">
+         شراء
+        </button>
+
+        <small>هذه نسخة تجريبية للواجهة؛ لا تتم معالجة أي مدفوعات.</small>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- صفحة استمارة الطلب (تفتح عند الضغط على شراء) -->
+  <div id="orderPage" aria-hidden="true">
+    <div class="order-backdrop" data-close-order></div>
+
+    <div class="order-card" role="dialog" aria-modal="true" aria-labelledby="orderTitle" tabindex="-1">
+      <div class="order-top">
+        <div class="order-logo">natassia</div>
+        <button class="close-order" aria-label="إغلاق" data-close-order>×</button>
+      </div>
+
+      <h3 id="orderTitle">تأكيد الطلب</h3>
+      <p class="order-subtitle">راجع طلبك ثم أرسله عبر واتساب لتأكيد الطلب (تجريبي).</p>
+
+      <div id="orderSummary" aria-live="polite"></div>
+
+      <form id="customerForm" class="order-fields" novalidate>
+        <label for="customerName">الاسم الكامل</label>
+        <input id="customerName" name="customerName" type="text" required>
+
+        <label for="customerPhone">رقم الهاتف</label>
+        <input id="customerPhone" name="customerPhone" type="tel" required>
+
+        <label for="customerWilaya">الولاية</label>
+        <input id="customerWilaya" name="customerWilaya" type="text" required placeholder="مثال: ولاية الجزائر">
+
+        <label for="customerAddress">العنوان (تفصيل)</label>
+        <textarea id="customerAddress" name="customerAddress" required placeholder="شارع، بناية، نقطة مميزة"></textarea>
+
+        <button id="submitOrder" type="submit">إرسال عبر واتساب</button>
+        <button type="button" id="backOrderBtn" class="back-order">العودة للسلة</button>
+
+        <p class="order-note">سيتم فتح واتساب مع ملخص الطلب — لا يتم إرسال الطلب تلقائياً في هذه النسخة.</p>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
